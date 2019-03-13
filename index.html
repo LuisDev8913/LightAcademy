@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="pro/css/main.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="search_users">
+                    <div>
+                        <input type="search" id='search' placeholder="search">
+                        <div class="list_group" id="result"></div>
+                    </div>
+                    <div>
+                        <button class="js_button_campaign">Show chart</button>
+                    </div>
+                </div>
+                <div class="users">
+                    <div class="users_title">
+                        <div class="users_last">
+                            <span>Last</span>
+                        </div>
+                        <div class="users_first">
+                            <span>First</span>
+                        </div>
+                        <div class="users_username">
+                            <span>Username</span>
+                        </div>
+                        <div class="users_phone">
+                            <span>Phone</span>
+                        </div>
+                        <div class="users_location">
+                            <span>Location</span>
+                        </div>
+                    </div>
+                    <div class="users_content">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!--pop up-->
+        <section>
+            <div class="overlay js_overlay_campaign">
+                <div class="popup_chart js_popup_campaign">
+                    <canvas id="pie-chart" width="600" height="450"></canvas>
+                    <div class="close_popup js_close_campaign"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <script
+                src="http://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous">
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script type="text/javascript" src="pro/js/script.min.js"></script>
+    </body>
+</html>

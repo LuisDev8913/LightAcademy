@@ -1,0 +1,188 @@
+*{
+	box-sizing: border-box;
+}
+body{
+  font-size: 16px;
+  background-color: #eee;
+  color: #444;
+}
+.container{
+	max-width: 2400px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	display: block;
+	cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+img{
+	display: block;
+	max-width: 100%;
+	height:auto;
+}
+.search_users{
+  max-width: 900px;
+  margin: 0 auto;
+  @include flexbox;
+  input{
+    padding: 10px 15px;
+  }
+  button{
+    display: inline;
+    background-color: #894084;
+    color: white;
+    padding: 10px 15px;
+  }
+  .list_group{
+    height: 50px;
+    padding: 5px;
+  }
+}
+.users{
+  background-color: #eee;
+  max-width: 2340px;
+  margin: 0 auto;
+  .users_title{
+    @include flexbox;
+    @include justify-content(space-around);
+    @include align-items(flex-start);
+    padding-top: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 172px;
+    text-align: left;
+    max-width: 1928px;
+  }
+  .users_content{
+
+    .users_list{
+      @include flexbox;
+      @include justify-content(flex-start);
+      line-height: 100px;
+      text-align: left;
+      padding: 10px 80px 10px 30px;
+    }
+    .users_line:nth-child(2n+1){
+      background-color: #cccccc;
+    }
+  }
+
+  .users_avatar{
+    img{
+      border: 8px solid #fff;
+      width: 110px;
+      height: 110px;
+      border-radius: 100%;
+      margin-right: 30px;
+    }
+  }
+  .users_last{
+    flex-basis: 400px;
+  }
+  .users_first{
+    flex-basis: 385px;
+  }
+  .users_username{
+    flex-basis: 385px;
+  }
+  .users_phone{
+    flex-basis: 390px;
+  }
+  .users_location{
+    flex-basis: 390px;
+  }
+  .users_plus{
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+  }
+  .users_info{
+    padding-top: 60px;
+    @include flexbox;
+    @include justify-content(space-around);
+    p{
+      font-weight: bold;
+      line-height: 36px;
+      span{
+        font-weight: normal;
+      }
+    }
+    .users_info_name{
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .users_info_mod{
+      margin-top: 40px;
+    }
+  }
+}
+.main_info .users_avatar{
+  img{
+    width: 240px;
+    height: 240px;
+  }
+}
+.minus_icon{
+  display: block;
+  width: 20px;
+  height: 10px;
+  background-color: #444;
+}
+.main_info{
+  display: none;
+}
+.dis_none{
+  display: block;
+}
+.arrow{
+  display: none;
+}
+//overlay
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: none;
+}
+//pop up
+.popup_chart{
+  position: absolute;
+  width: 1000px;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  padding: 40px;
+  background-color: #cccccc;
+}
+.close_popup{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+}
+.close_popup:before{
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  transform: rotate(-45deg);
+}
+.close_popup:after{
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  transform: rotate(45deg);
+  left: -4px;
+}
